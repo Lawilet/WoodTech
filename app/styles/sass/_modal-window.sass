@@ -1,0 +1,39 @@
+.modal-window
+  display: none
+  max-width: 400px
+  width: 100%
+  border-radius: $radius
+  margin: 0
+  padding: 20px 15px
+  &__title
+    width: 100%
+    text-align: center
+    color: #454545
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 23px
+    margin-bottom: 15px
+  &__reservation-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: auto
+  &__input
+    transition: $transition
+    font-family: roboto,sans-serif
+    font-weight: 400
+    font-size: 14px
+    width: 100%
+    margin: 5px 0
+    padding: 8px 14px
+    border-radius: $radius-style
+    border: 1px solid $light-div
+    &::placeholder
+      font-weight: 300
+    &:active,&:focus
+      border: 1px solid $dark-div
+  &__btn
+    margin-top: 20px
+    margin-bottom: 20px

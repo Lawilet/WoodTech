@@ -1,0 +1,207 @@
+.section-about
+  padding-top: 80px
+  padding-bottom: 100px
+  background-color: $white
+  &__slider-wrapper
+    display: flex
+    max-height: 550px
+    &::before
+      content: ''
+      position: absolute
+      height: 50%
+      width: 35%
+      background-color: $dark
+      left: 95px
+      top: -15px
+      border-radius: $radius-style
+      opacity: .4
+  &__lazzy-slider
+    width: 100%
+    position: relative
+    display: inline-block
+    max-width: 440px
+    max-height: 550px
+  &__lazzy-slide
+    img
+      width: 100%
+      max-width: 100%
+      height: 550px
+      max-height: 550px
+      border-radius: $radius-style
+  &__slider-caption
+    font-family: roboto, sans-serif
+    font-weight: 800
+    font-size: 52px
+    color: $white
+    position: absolute
+    bottom: 70px
+    right: 90px
+    z-index: 1
+    padding: 2px 50px 2px 25px
+    background-color: $dark
+    border-radius: $radius-style
+    opacity: .9
+    span
+      display: inline-block
+      font-family: raleway, sans-serif
+      font-size: 20px
+      font-weight: 300
+      line-height: 1.2  
+  &__title
+    font-size: 29px
+    font-weight: 800
+    text-align: left
+    line-height: 1.25
+    padding-bottom: 50px
+    position: relative
+    &::after
+      content: ' '
+      position: absolute
+      left: 0
+      background-image: url(../images/dist/icons/ellipse-accent.svg)
+      background-repeat: repeat-x
+      background-position: 0 65px
+      height: 100%
+      width: 35px 
+    span
+      margin-bottom: 10px
+      display: block
+      font-size: 16px
+      font-weight: 800
+      color: $accent
+      text-transform: uppercase
+      &::before
+        content: '\\\\'
+        margin-right: 5px
+  &__desc
+    font-size: 14px
+    font-weight: 400
+.feature-item-wrapper
+  display: flex
+  margin-top: 15px
+  width: 100%
+  &--margin
+    margin-top: 60px
+.feature-item
+  display: flex
+  flex-direction: column
+  &--company-features
+    justify-content: center
+    align-items: center
+    border-bottom: 1px solid $light-div
+    padding-bottom: 40px
+    height: 100%
+  &--margin
+    margin-left: 25px
+  &__title-wrapper
+    display: flex
+    align-items: center
+    position: relative
+    border-bottom: 1px solid $light-div
+    padding-bottom: 20px
+    margin: 20px 0
+    height: 60px
+    &--company-features-wrapper
+      flex-direction: column
+      border-bottom: none
+      align-items: center
+      justify-content: center
+  &__logo
+    max-width: 70px
+    max-height: 48px  
+    margin-right: 15px
+    &--company-features-logo
+      margin-bottom: 25px
+      margin-right: 0
+  &__title
+    color: $textcolor
+    font-size: 19px
+    font-weight: 800
+    line-height: 1.2
+    &:hover
+      color: $textcolor
+    &--company-features-title
+      text-align: center
+      margin-bottom: 12px
+      width: 100%   
+  &__desc
+    font-size: $small-text
+    font-weight: 400
+    max-width: 300px
+    &--company-features-desc
+      max-width: 230px  
+      width: 100%
+      text-align: center
+  &__more-info
+    text-decoration: underline
+    margin-top: 5px
+    display: block
+    color: $textcolor
+    font-size: 15px
+    font-weight: 800
+    &:hover
+      color: $textcolor
+  &--border
+    border: none
+
+
+  
+@include media-breakpoint-only(md)
+
+  .section-about
+    padding-top: 40px
+  .feature-item
+    &--company-features
+      margin-bottom: 25px
+    &__desc,&__more-info
+      display: none
+      &--company-features-info,&--company-features-desc
+        display: flex
+        max-width: 350px  
+    &--company-features
+      border-bottom: none
+
+@include media-breakpoint-down(md)
+
+  .section-about
+    padding-bottom: 80px
+    &__lazzy-slide
+      img
+        max-height: 435px
+    &__title
+      margin-top: 30px
+
+  .feature-item-wrapper
+    &--margin
+      margin-top: 0
+
+@include media-breakpoint-down(sm)
+  .section-about
+    padding-bottom: 40px
+    padding-top: 0px
+    &__background
+      padding: 0 30px
+      background-color: $dark
+    &__slider-wrapper
+      &::before
+        display: none
+    &__slider-caption
+      right: 0
+      bottom: 0
+      opacity: 1
+      border-radius: 5px
+  .section-works-item
+    &__btn
+      margin-top: 25px
+  .feature-item-wrapper
+    display: flex
+    flex-direction: column
+  .feature-item
+    background-color: $light-bg
+    padding: 30px 20px 35px
+    &--margin
+      margin: 0
+      margin-top: 20px
+    &__desc
+      max-width: 100%
+      width: 100%

@@ -1,0 +1,107 @@
+.services
+  &__desc
+    margin-bottom: 30px
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 60px 0
+    margin-top: 50px
+    background-color: $light-bg
+.services-item
+  text-decoration: none
+  color: $textcolor
+  cursor: pointer
+  height: 255px 
+  margin-bottom: 50px 
+  display: flex
+  border: 1px solid $light-disabled
+  position: relative
+  &:hover
+    text-decoration: none
+    &::before
+      background-color: $accent
+  &::before
+    content: ''
+    position: absolute
+    height: 30px
+    width: 3px  
+    background-color: $light-disabled
+    top: 50%
+    left: -2px
+  
+  &__img
+    opacity: .8
+    max-width: 320px
+    width: 100%
+    transition: $transition 
+.services-item-content
+  display: flex
+  flex-direction: column
+  padding: 35px 30px
+  &__title
+    text-transform: uppercase
+    font-size: 18px
+    font-weight: 800
+    text-align: center
+  &__desc
+    max-width: 260px    
+    font-size: 14px
+    line-height: 1.7
+    color: rgba(126, 126, 126, 1)
+
+.services-item:hover .services-item-content
+  &__title
+    color: $accent
+.services-item:hover .services-item
+  &__img
+    opacity: 1
+
+@include media-breakpoint-down(lg)
+
+  .services-item
+    max-height: 320px
+    height: 100%
+    &__img
+      max-width: 50%
+      width: 100%
+  .services-item-content
+    &__desc
+      width: 100%
+      max-width: 100% 
+
+
+@include media-breakpoint-down(sm)
+
+  .services-item
+    flex-direction: column
+    height: 100%
+    max-height: 100%
+    width: 100%
+    max-width: 500px
+    margin-bottom: 0
+    &--margin
+      display: flex
+      align-items: center
+      justify-content: center
+    &__img
+      max-height: 320px
+      max-width: 100%
+      width: 100%
+  .services-item-content
+    &__desc
+      width: 100%
+      max-width: 100%
+
+
+@media screen and ( min-width: 900px )
+
+  .services-item
+    &--margin
+      margin-bottom: -30px
+
+@media screen and ( max-width: 900px )
+
+  .services-item
+    &--margin
+      margin-bottom: 20px

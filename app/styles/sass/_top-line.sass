@@ -1,0 +1,57 @@
+.top-line
+  display: flex
+  justify-content: space-between
+  padding-bottom: 20px
+  &__breadcrumbs-nav
+    a
+      font-size: 14px 
+      font-weight: 600
+      color: #cccc
+      padding-right: 15px
+      text-decoration: underline
+      position: relative
+      text-align: left
+      &::after
+        content: ''
+        position: absolute
+        background-image: url(../images/dist/icons/arrow-left.svg)
+        background-repeat: no-repeat
+        background-position: center
+        top: 3px
+        right: 0
+        width: 6px
+        height: 10.5px
+    span
+      padding-left: 10px
+      font-size: 14px
+      font-weight: 600
+      color: rgba(136, 136, 136, 1)
+  &__address
+    text-align: right
+    padding-left: 20px
+    font-size: 14px
+    font-weight: 800
+    color: rgba(136, 136, 136, 1)
+    position: relative
+    &::before
+      content: ' '
+      position: absolute
+      background-image: url(../images/dist/icons/mapmarker.svg)
+      background-repeat: no-repeat
+      background-position: center
+      left: 0
+      top: 2px
+      height: 15px
+      width: 12px 
+
+
+@include media-breakpoint-down(md)
+
+  .top-line
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    &__address
+      margin-top: 10px
+    &__breadcrumbs-nav
+      text-align: center

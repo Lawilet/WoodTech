@@ -1,0 +1,108 @@
+.section-trust
+  background-color: $deep
+  width: 100%
+  padding: 50px 0
+  &__title
+    color: $dark-header
+    font-weight: 900
+    font-size: 18px
+    text-transform: uppercase
+    &::after
+      content: ''
+      display: block
+      height: 1px 
+      width: 260px  
+      background-color: $dark-div
+      margin-top: 15px
+  &__features-wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+  &__feature
+    padding-right: 70px
+    display: flex
+    flex-direction: column
+    color: $dark-header
+    font-size: 14px
+    font-weight: 400
+    &--no-padding
+      padding-right: 0
+    span
+      margin-top: 10px  
+    div
+      font-weight: 700
+      font-size: 14px
+      display: inline
+      color: #697589
+      font-family: roboto
+  &__callback-wrapper
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: flex-end 
+  &__callback-text
+    min-width: 400px
+    text-align: right
+    color: $dark-header
+    font-weight: 400
+  &__callback-phone
+    text-decoration: none
+    color: $white
+    font-size: 28px
+    font-weight: 300
+    font-family: roboto,sans-serif
+    margin-top: 10px
+    margin-bottom: 10px
+    &:hover
+      text-decoration: none
+      color: $white 
+  &__callback-btn
+    width: fit-content
+    font-family: roboto
+    text-align: center
+
+@media screen and (min-width: 1200px) and ( max-width: 1350px )
+  
+  .section-trust
+    &__title,&__features-wrapper
+      padding-left: 35px
+    &__callback-wrapper
+      padding-right: 35px
+    &__feature
+      &--no-padding
+
+@media screen and (max-width: 1200px)
+
+  .section-trust
+    &__feature
+      padding-right: 35px
+      line-height: 1.35
+      &--no-padding
+        display: none
+    &__callback-text
+      line-height: 1.45
+
+@media screen and (max-width: 992px)
+  
+  .section-trust
+    &__title
+      display: none
+    &__features-wrapper
+      display: none
+    &__callback-wrapper
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+    &__callback-text
+      font-size: 14px
+      width: 100%
+      min-width: 100%
+      text-align: center
+
+@media screen and ( max-width: 370px )
+  .section-trust
+    &__callback-wrapper
+      margin-top: 30px

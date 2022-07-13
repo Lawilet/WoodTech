@@ -1,0 +1,30 @@
+.header-light
+  padding: 40px 0
+  background-color: $white
+  &__logo
+    color: $deep
+    line-height: 1
+    span
+      font-weight: 500
+    &:hover
+      color: $deep
+  &__menu-burger
+    div
+      background-color: $textcolor
+  &__nav
+    a
+      color: $textcolor
+      &:hover, &:active, &:focus
+        background-color: $accent
+        color: $white
+  &__social
+    background-color: $white
+    img
+      height: 20px
+      width: 17px
+
+
+@media screen and ( max-width: 500px  )
+
+  .header-light
+    padding: 25px 0

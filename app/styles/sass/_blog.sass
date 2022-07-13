@@ -1,0 +1,186 @@
+.blog
+  padding: 70px 0
+  &__title
+    font-size: 29px
+    font-weight: 800
+    text-align: center
+    margin-bottom: 45px
+  &__slider
+    position: relative
+    width: 100%
+    min-width: 100%
+  &__posts-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 15px
+    height: 100%
+    border: 1px solid rgba(238, 238, 238, 1)
+    transition: .5s ease-out
+    &:hover
+      border: 1px solid $accent
+      transition: .5s ease-out
+      &::before
+        transition: .8s ease-out
+        opacity: .4
+    &::before
+      transition: .8s ease-out
+      content: ' '
+      position: absolute
+      top: 15px
+      left: 25px
+      right: 25px
+      bottom: 15px
+      background-image: url(../images/dist/other/wood-decoration.jpg)
+      background-repeat: no-repeat
+      background-size: cover
+      opacity: .1
+  &__all-posts
+    text-align: center
+    max-width: 200px
+    font-size: 24px
+    font-weight: 500
+    color: $textcolor
+    transition: .5s ease-out
+    z-index: 2
+    &:hover
+      color: $textcolor
+      text-decoration: underline
+  &__pagination-wrapper
+    margin-top: 45px
+    display: flex
+    align-items: center
+    justify-content: center
+  &__pagination
+    color: rgba(196, 196, 196, 1)
+    font-size: 15px
+    font-weight: 600
+    position: relative
+    text-decoration: none
+    &::after,&::before
+      position: absolute
+    &--prev
+      margin-right: 10px
+      &::before
+        left: -10px  
+        content: '<'
+    &--next
+      margin-left: 10px
+      &::after
+        right: -10px
+        content: '>'
+  &__pagination-num
+    color: $textcolor
+    font-size: 15px
+    font-weight: 600
+    margin: 0 5px 0 5px
+    text-decoration: none
+    padding: 12px 17px 
+    border-radius: $radius-style
+    &:hover
+      text-decoration: none
+      background-color: $accent
+      color: $white
+.blog-slide
+  transition: .5s ease-out 
+  height: 100%
+  display: flex
+  flex-direction: column
+  padding: 15px 15px 20px 15px
+  border: 1px solid rgba(238, 238, 238, 1)
+  border-radius: $radius-style
+  &:hover
+    transition: .5s ease-out
+    border: 1px solid $accent
+  &--page
+    max-width: 100%
+    width: 100%
+  &--margin
+    margin-bottom: 20px 
+  &__img-wrapper
+    position: relative
+    &:after,&:before
+      transition: all .5s ease-out
+      content: ' '
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(32, 35, 40, 0.25)
+      opacity: 0
+  &__img
+    position: relative
+    width: 100%
+    height: 270px
+  &__date
+    transition: all .5s ease-out
+    position: absolute
+    top: 30px
+    left: 30px
+    padding: 5px 10px
+    color: $white
+    font-size: 10px
+    font-weight: 500
+    font-family: roboto,sans-serif
+    text-align: center
+    text-transform: uppercase
+    background-color: $light-disabled
+    color: $textcolor
+    border-radius: $radius-style
+  &__title
+    position: relative
+    margin-top: 20px
+    padding-left: 10px
+    font-size: 18px
+    font-weight: 900
+    text-transform: uppercase
+    line-height: 1.3
+    &::before
+      transition: all .5s ease-out
+      left: 0
+      content: ' '
+      position: absolute
+      width: 3px
+      height: 100%
+      background-color: $light-disabled
+  &__desc
+    margin-top: 10px
+    font-size: 14px
+    line-height: 1.7
+  &__more-info
+    z-index: 10
+    margin-top: 20px
+    font-size: 15px
+    font-weight: 800
+    color: $textcolor
+    &:hover
+      color: $textcolor
+.swiper-pagination-bullet
+  width: 25px
+  height: 5px
+  border-radius: $radius-style
+  background-color: $dark
+.swiper-pagination-bullet-active
+  background-color: $accent
+.blog-slide:hover .blog-slide__date
+  transition: all .5s ease-out
+  background-color: $accent
+  color: $white
+.blog-slide:hover .blog-slide__title
+  &::before
+    background-color: $accent
+    transition: all .5s ease-out
+.blog-slide:hover .blog-slide__img-wrapper
+  &:after,&:before
+    opacity: 1
+    transition: all .5s ease-out
+
+
+@media screen and ( max-width: 768px )
+  
+  .blog-slide
+    max-width: 100%
+    width: 100%
+    &__img
+      height: 100%  

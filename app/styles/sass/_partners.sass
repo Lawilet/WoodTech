@@ -1,0 +1,62 @@
+.partners
+  background-color: $dark
+  padding: 70px 0 100px 0
+  position: relative
+  &::after
+    min-width: 100%
+    min-height: 100%
+    content: ' '
+    position: absolute
+    top: 0
+    left: 0
+    right: 0  
+    bottom: 0
+    background-image: url(../images/dist/interior-4.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 100%
+    opacity: .1
+  &__title
+    margin-bottom: 50px
+    font-size: 29px
+    color: $white
+    font-weight: 800
+.partners-item
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  &__logo
+    height: 70%  
+    width: 70%
+    &--width
+      width: 35% 
+    &--height
+      width: 26%
+  &__desc
+    padding-top: 20px
+    text-align: center
+    font-size: 14px
+    color: $white
+    line-height: 1.7
+    span
+      font-size: 14px
+      font-weight: 800
+      color: $accent
+
+
+@include media-breakpoint-down(md)
+
+  .partners-item
+    margin-bottom: 40px
+
+@include media-breakpoint-down(sm)
+
+  .partners
+    padding-top: 30px
+    padding-bottom: 30px
+    &::after
+      display: none
+  .partners-item
+    &__desc
+      max-width: 250px

@@ -1,0 +1,88 @@
+.site-section
+  padding-bottom: 70px
+  padding-top: 70px
+  &--no-padding
+    padding-bottom: 0
+  &__title
+    text-align: center
+    font-size: 24px
+    font-weight: 900
+    text-transform: uppercase
+    margin-bottom: 25px
+  &__desc
+    text-align: center
+    font-size: 15px
+    line-height: 1.7
+    color: $text-light
+    max-width: 550px
+    margin-bottom: 50px
+
+.site-section-info
+  display: flex
+  flex-direction: column
+  background-color: $light-bg
+  border-radius: $radius-style
+  padding-bottom: 40px
+  &__title
+    padding: 40px 0 25px 30px
+    text-transform: uppercase
+    font-size: 16px
+    font-weight: 800
+  &__link
+    width: 100%
+    padding: 10px 0 10px 30px
+    text-decoration: none
+    color: #666
+    font-size: 14px
+    font-weight: 500
+    &:hover
+      text-decoration: none
+      color: $white
+      background-color: $accent
+
+.site-section-company
+  padding-left: 60px
+  &__title
+    font-size: 31px
+    font-weight: 800
+    color: $textcolor
+    &--features-title
+      text-align: center
+      margin-bottom: 80px
+
+
+@include media-breakpoint-down(sm)
+
+  .site-section
+    padding: 30px 0
+    &--no-padding
+      padding-bottom: 0
+    &__title
+      margin-bottom: 25px
+    &__desc
+      min-width: 320px 
+      margin-bottom: 30px
+
+@include media-breakpoint-down(md)
+
+  .site-section-company
+    margin-top: 35px
+    padding: 0
+    &__title
+      text-align: center
+  
+  .site-section-info
+    max-width: 500px
+    width: 100% 
+
+@include media-breakpoint-down(lg)
+
+  .site-section-company
+    &--features
+      padding-left: 0
+
+@media screen and ( max-width: 500px )
+
+  .site-section-info
+    &--padding
+      padding: 0  
